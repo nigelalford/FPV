@@ -1,17 +1,18 @@
-
 # version
 # BetaFlight/DOGE 3.0.0 Sep  6 2016 / 22:15:32 (c1d5516)
 
 # name
-	name Garuda
+name Garuda
 
 # mixer
 	mixer CUSTOM
-		mmix reset
-		mmix 0  1.000  1.000 -1.000 -1.000
-		mmix 1  1.000  1.000  1.000  1.000
-		mmix 2  1.000 -1.000  1.000 -1.000
-		mmix 3  1.000 -1.000 -1.000  1.000
+
+	mmix reset
+
+	mmix 0  1.000  1.000 -1.000 -1.000
+	mmix 1  1.000  1.000  1.000  1.000
+	mmix 2  1.000 -1.000  1.000 -1.000
+	mmix 3  1.000 -1.000 -1.000  1.000
 
 # servo
 	servo 0 1000 2000 1500 90 90 100 -1
@@ -25,6 +26,8 @@
 
 # servo mix
 	smix reset
+
+
 
 # feature
 	feature -RX_PPM
@@ -52,11 +55,11 @@
 	feature -AIRMODE
 	feature VBAT
 	feature RX_SERIAL
-	feature MOTOR_STOP
 	feature SOFTSERIAL
 	feature FAILSAFE
 	feature TELEMETRY
 	feature CURRENT_METER
+	feature RSSI_ADC
 	feature AIRMODE
 
 # beeper
@@ -86,7 +89,7 @@
 	serial 20 1 115200 57600 0 115200
 	serial 0 5 115200 57600 0 115200
 	serial 1 0 115200 57600 0 115200
-	serial 2 64 115200 57600 0 115200
+	serial 2 68 115200 57600 0 115200
 
 # led
 	led 0 0,0::C:0
@@ -190,9 +193,9 @@
 	mode_color 6 10 0
 
 # aux
-	aux 0 0 1 1950 2100
-	aux 1 29 0 1950 2100
-	aux 2 0 0 900 900
+	aux 0 0 0 1425 1575
+	aux 1 26 1 900 1525
+	aux 2 29 0 1425 1575
 	aux 3 0 0 900 900
 	aux 4 0 0 900 900
 	aux 5 0 0 900 900
@@ -212,9 +215,9 @@
 	aux 19 0 0 900 900
 
 # adjrange
-	adjrange 0 0 0 900 900 0 0
-	adjrange 1 0 0 900 900 0 0
-	adjrange 2 0 0 900 900 0 0
+	adjrange 0 0 2 1925 2100 12 2
+	adjrange 1 0 2 1425 1550 12 2
+	adjrange 2 0 2 900 1075 12 2
 	adjrange 3 0 0 900 900 0 0
 	adjrange 4 0 0 900 900 0 0
 	adjrange 5 0 0 900 900 0 0
@@ -349,7 +352,7 @@
 	set failsafe_delay = 10
 	set failsafe_off_delay = 10
 	set failsafe_throttle = 1000
-	set failsafe_kill_switch = OFF
+	set failsafe_kill_switch = ON
 	set failsafe_throttle_low_delay = 100
 	set failsafe_procedure = DROP
 	set rx_min_usec = 885
@@ -376,6 +379,7 @@
 
 # profile
 	profile 0
+
 		set gps_pos_p = 15
 		set gps_pos_i = 0
 		set gps_pos_d = 0
@@ -423,10 +427,11 @@
 		set p_vel = 55
 		set i_vel = 55
 		set d_vel = 75
-		rateprofile 0
+		rateprofile 2
 
 # rateprofile
-	rateprofile 0
+	rateprofile 2
+
 		set rc_rate = 100
 		set rc_rate_yaw = 100
 		set rc_expo = 0
@@ -438,3 +443,5 @@
 		set yaw_srate = 78
 		set tpa_rate = 10
 		set tpa_breakpoint = 1650
+
+#
