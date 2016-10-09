@@ -54,7 +54,7 @@ set acc_hardware = NONE
 set pid_process_denom = 1
 
 # profile
-profile 0
+profile 1
 
 set p_pitch = 39
 set d_pitch = 20
