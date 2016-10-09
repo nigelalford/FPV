@@ -27,7 +27,7 @@ map TAER1234
 
 # serial
 serial 1 64 115200 57600 0 115200
-serial 2 68 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
 
 # led
 
@@ -41,6 +41,8 @@ aux 1 26 1 1375 2100
 aux 2 29 0 900 1100
 
 # adjrange
+adjrange 0 0 2 900 1100 4 2
+adjrange 1 1 2 1400 1600 4 2
 
 # rxrange
 
@@ -58,17 +60,23 @@ set acc_hardware = NONE
 set pid_process_denom = 1
 
 # profile
-profile 0
+profile 1
 
-set p_pitch = 45
-set p_yaw = 60
-rateprofile 0
+set p_pitch = 55
+set i_pitch = 16
+set d_pitch = 4
+set p_roll = 60
+set i_roll = 16
+set d_roll = 4
+set p_yaw = 30
+set i_yaw = 16
+rateprofile 1
 
 # rateprofile
-rateprofile 0
+rateprofile 1
 
-set roll_rate = 78
-set pitch_rate = 78
-set yaw_rate = 78
+set roll_rate = 80
+set pitch_rate = 80
+set yaw_rate = 80
 
 #
