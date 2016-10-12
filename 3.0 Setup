@@ -55,20 +55,21 @@ set pid_process_denom = 1
 # profile
 profile 1
 
-set pterm_srate_ratio = 80
-set p_pitch = 40
-set i_pitch = 30
-set d_pitch = 20
-set p_roll = 40
-set i_roll = 30
-set p_yaw = 60
+set vbat_pid_compensation = ON
+set p_pitch = 50
+set i_pitch = 40
+set d_pitch = 19
+set p_roll = 50
+set d_roll = 19
+set p_yaw = 80
 rateprofile 1
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 80
-set pitch_srate = 80
+set roll_srate = 81
+set pitch_srate = 81
 set yaw_srate = 80
+set tpa_breakpoint = 1700
 
 #
