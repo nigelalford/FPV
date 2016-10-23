@@ -1,10 +1,24 @@
 # version
-# BetaFlight/DOGE 3.0.0 Aug 24 2016 / 23:59:05 (c5c3598)
+# BetaFlight/LUX_RACE 3.0.1 Oct 18 2016 / 10:17:14 (48b7b4f)
 
 # name
-name ruda
+name alienwares
+
+#motors
+#rs2205
+
+#esc
+#littlebee 20a - 14.8 blheli
 
 # mixer
+mixer CUSTOM
+
+mmix reset
+
+mmix 0  1.000  1.000 -1.000 -1.000
+mmix 1  1.000  1.000  1.000  1.000
+mmix 2  1.000 -1.000 -1.000  1.000
+mmix 3  1.000 -1.000  1.000 -1.000
 
 # servo
 
@@ -14,10 +28,7 @@ name ruda
 # feature
 feature -RX_PPM
 feature RX_SERIAL
-feature MOTOR_STOP
-feature SOFTSERIAL
 feature TELEMETRY
-feature CURRENT_METER
 feature AIRMODE
 
 # beeper
@@ -26,8 +37,8 @@ feature AIRMODE
 map TAER1234
 
 # serial
-serial 1 64 115200 57600 0 115200
-serial 2 32 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
+serial 1 32 115200 57600 0 115200
 
 # led
 
@@ -36,68 +47,38 @@ serial 2 32 115200 57600 0 115200
 # mode_color
 
 # aux
-aux 0 0 0 900 1100
+aux 0 0 0 900 1300
 aux 1 26 1 1375 2100
-aux 2 29 0 900 1100
 
 # adjrange
-adjrange 0 0 2 900 1100 4 2
-adjrange 1 1 2 1400 1600 4 2
 
 # rxrange
 
 # rxfail
 
 # master
-set min_throttle = 1035
-set motor_pwm_protocol = MULTISHOT
-set disarm_kill_switch = OFF
+set roll_yaw_cam_mix_degrees = 30
+set min_throttle = 1015
 set serialrx_provider = SBUS
-set telemetry_inversion = ON
-set deadband = 2
-set yaw_deadband = 1
-set acc_hardware = NONE
-set pid_process_denom = 1
+set align_board_yaw = 180
+set pid_process_denom = 2
 
 # profile
 profile 1
 
-set pterm_srate_ratio = 83
-set p_pitch = 55
-set i_pitch = 16
-set d_pitch = 4
-set p_roll = 55
-set i_roll = 16
-set d_roll = 4
-set p_yaw = 30
-set i_yaw = 16
-rateprofile 0
-
-# rateprofile
-rateprofile 0
-
-set roll_srate = 80
-set pitch_srate = 80
-set yaw_srate = 79
-
-profile 2
-
-set pterm_srate_ratio = 83
 set p_pitch = 40
-set i_pitch = 65
-set d_pitch = 20
+set i_pitch = 20
+set d_pitch = 10
 set p_roll = 40
-set i_roll = 65
-set d_roll = 20
-set p_yaw = 60
-set i_yaw = 45
-rateprofile 0
+set i_roll = 20
+set d_roll = 10
+set p_yaw = 35
+set i_yaw = 30
+rateprofile 1
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 80
-set pitch_srate = 80
-set yaw_srate = 79
-
-#
+set roll_srate = 83
+set pitch_srate = 83
+set yaw_srate = 82
