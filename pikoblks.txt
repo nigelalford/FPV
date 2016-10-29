@@ -1,0 +1,67 @@
+# version
+# BetaFlight/PIKOBLX 3.0.0 Aug 27 2016 / 06:47:46 (00cad53)
+
+# name
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature MOTOR_STOP
+feature TELEMETRY
+feature AIRMODE
+feature SUPEREXPO_RATES
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 2 68 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 900 1325
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set serialrx_provider = SBUS
+set sbus_inversion = OFF
+set telemetry_inversion = ON
+set align_board_yaw = -45
+
+# profile
+profile 0
+
+set p_pitch = 47
+set i_pitch = 45
+set d_pitch = 20
+set p_roll = 42
+set d_roll = 18
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set rc_rate = 85
+set rc_rate_yaw = 85
+set roll_srate = 75
+set pitch_srate = 75
+set yaw_srate = 75
