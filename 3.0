@@ -57,6 +57,7 @@ adjrange 1 1 2 1400 1600 4 2
 # rxfail
 
 # master
+set roll_yaw_cam_mix_degrees = 30
 set min_throttle = 1020
 set motor_pwm_protocol = MULTISHOT
 set disarm_kill_switch = OFF
@@ -69,7 +70,6 @@ set pid_process_denom = 1
 # profile
 profile 2
 
-set dterm_setpoint_weight = 175
 set p_pitch = 48
 set i_pitch = 60
 set d_pitch = 20
@@ -85,4 +85,4 @@ set roll_srate = 87
 set pitch_srate = 87
 set yaw_srate = 84
 
-# 
+#
