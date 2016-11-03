@@ -72,9 +72,10 @@ profile 2
 
 set p_pitch = 48
 set i_pitch = 60
-set d_pitch = 20
+set d_pitch = 25
 set p_roll = 45
 set i_roll = 60
+set d_roll = 25
 set p_yaw = 60
 rateprofile 1
 
