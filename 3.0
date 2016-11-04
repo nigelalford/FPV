@@ -70,6 +70,7 @@ set pid_process_denom = 1
 # profile
 profile 2
 
+set dterm_setpoint_weight = 175
 set p_pitch = 48
 set i_pitch = 60
 set d_pitch = 25
@@ -82,8 +83,8 @@ rateprofile 1
 # rateprofile
 rateprofile 1
 
-set roll_srate = 87
-set pitch_srate = 87
-set yaw_srate = 84
+set roll_srate = 83
+set pitch_srate = 83
+set yaw_srate = 81
 
-#
+# 
