@@ -1,8 +1,10 @@
 # version
 # BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
 
+# version
+# BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
+
 # name
-name ruda
 
 # mixer
 mixer CUSTOM
@@ -22,10 +24,10 @@ mmix 3  1.000  1.000  1.000  1.000
 # feature
 feature -RX_PPM
 feature RX_SERIAL
-feature MOTOR_STOP
 feature SOFTSERIAL
 feature TELEMETRY
 feature CURRENT_METER
+feature LED_STRIP
 feature AIRMODE
 
 # beeper
@@ -34,18 +36,22 @@ feature AIRMODE
 map TAER1234
 
 # serial
-serial 0 0 115200 57600 0 115200
 serial 1 68 115200 57600 0 115200
 
 # led
+led 0 7,12::AT:0
+led 1 8,12::AT:0
+led 2 9,12::AT:0
+led 3 10,12::AT:0
 
 # color
 
 # mode_color
+mode_color 6 1 2
 
 # aux
 aux 0 0 0 900 1100
-aux 1 26 1 1550 2100
+aux 1 26 0 1800 2100
 aux 2 29 0 900 1100
 
 # adjrange
@@ -58,9 +64,8 @@ adjrange 1 1 2 1400 1600 4 2
 
 # master
 set roll_yaw_cam_mix_degrees = 30
-set min_throttle = 1020
+set min_throttle = 1023
 set motor_pwm_protocol = MULTISHOT
-set disarm_kill_switch = OFF
 set serialrx_provider = SBUS
 set deadband = 2
 set yaw_deadband = 1
@@ -70,7 +75,7 @@ set pid_process_denom = 1
 # profile
 profile 2
 
-set dterm_setpoint_weight = 175
+set dterm_setpoint_weight = 150
 set p_pitch = 48
 set i_pitch = 60
 set d_pitch = 25
@@ -83,8 +88,8 @@ rateprofile 1
 # rateprofile
 rateprofile 1
 
-set roll_srate = 83
-set pitch_srate = 83
+set roll_srate = 84
+set pitch_srate = 84
 set yaw_srate = 81
 
 # 
