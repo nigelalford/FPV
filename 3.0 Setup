@@ -1,10 +1,18 @@
 # version
-# BetaFlight/DOGE 3.0.0 Sep 11 2016 / 00:30:58 (a21694b)
+# BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
 
 # name
-name blue boy
+name ruda
 
 # mixer
+mixer CUSTOM
+
+mmix reset
+
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000 -1.000 -1.000
+mmix 3  1.000  1.000  1.000  1.000
 
 # servo
 
@@ -25,6 +33,7 @@ feature AIRMODE
 map TAER1234
 
 # serial
+serial 0 0 115200 57600 0 115200
 serial 1 68 115200 57600 0 115200
 
 # led
@@ -35,10 +44,12 @@ serial 1 68 115200 57600 0 115200
 
 # aux
 aux 0 0 0 900 1100
-aux 1 26 1 1375 2100
+aux 1 26 0 1825 2100
 aux 2 29 0 900 1100
 
 # adjrange
+adjrange 0 0 2 900 1100 4 2
+adjrange 1 1 2 1400 1600 4 2
 
 # rxrange
 
@@ -46,31 +57,32 @@ aux 2 29 0 900 1100
 
 # master
 set roll_yaw_cam_mix_degrees = 30
-set min_throttle = 1035
+set min_throttle = 1020
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
+set deadband = 1
+set failsafe_kill_switch = ON
 set acc_hardware = NONE
 set pid_process_denom = 1
 
 # profile
-profile 1
+profile 2
 
-set vbat_pid_compensation = ON
-set p_pitch = 50
-set i_pitch = 40
-set d_pitch = 19
-set p_roll = 50
-set i_roll = 40
-set d_roll = 19
-set p_yaw = 80
-rateprofile 1
+set dterm_setpoint_weight = 160
+set p_pitch = 48
+set i_pitch = 60
+set d_pitch = 25
+set p_roll = 45
+set i_roll = 60
+set d_roll = 25
+set p_yaw = 60
+rateprofile 0
 
 # rateprofile
-rateprofile 1
+rateprofile 0
 
-set roll_srate = 81
-set pitch_srate = 81
-set yaw_srate = 80
-set tpa_breakpoint = 1700
+set roll_srate = 84
+set pitch_srate = 84
+set yaw_srate = 83
 
-#
+# 
