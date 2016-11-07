@@ -1,10 +1,14 @@
 # version
 # BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
 
-# version
-# BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
-
 # name
+garuda blue
+
+#motors
+#emax rs2205 2300kv
+
+#esc
+#racestar/cicada 30a
 
 # mixer
 mixer CUSTOM
@@ -75,7 +79,7 @@ set pid_process_denom = 1
 # profile
 profile 2
 
-set dterm_setpoint_weight = 150
+set dterm_setpoint_weight = 160
 set p_pitch = 48
 set i_pitch = 60
 set d_pitch = 25
@@ -90,6 +94,6 @@ rateprofile 1
 
 set roll_srate = 84
 set pitch_srate = 84
-set yaw_srate = 81
+set yaw_srate = 83  
 
 # 
