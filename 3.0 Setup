@@ -2,7 +2,7 @@
 # BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
 
 # name
-name ruda
+name red ruda
 
 # mixer
 mixer CUSTOM
@@ -25,6 +25,7 @@ feature RX_SERIAL
 feature SOFTSERIAL
 feature TELEMETRY
 feature CURRENT_METER
+feature LED_STRIP
 feature AIRMODE
 
 # beeper
@@ -37,19 +38,22 @@ serial 0 0 115200 57600 0 115200
 serial 1 68 115200 57600 0 115200
 
 # led
+led 0 7,12::AT:0
+led 1 8,12::AT:0
+led 2 9,12::AT:0
+led 3 10,12::AT:0
 
 # color
 
 # mode_color
+mode_color 6 1 2
 
 # aux
 aux 0 0 0 900 1100
-aux 1 26 0 1825 2100
+aux 1 26 0 1800 2100
 aux 2 29 0 900 1100
 
 # adjrange
-adjrange 0 0 2 900 1100 4 2
-adjrange 1 1 2 1400 1600 4 2
 
 # rxrange
 
@@ -57,19 +61,20 @@ adjrange 1 1 2 1400 1600 4 2
 
 # master
 set roll_yaw_cam_mix_degrees = 30
-set min_throttle = 1020
+set min_throttle = 1023
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
-set deadband = 1
+set deadband = 2
+set yaw_deadband = 1
 set failsafe_kill_switch = ON
 set acc_hardware = NONE
-set pid_process_denom = 1
+set pid_process_denom = 2
 
 # profile
-profile 2
+profile 1
 
-set dterm_setpoint_weight = 160
-set p_pitch = 48
+set dterm_setpoint_weight = 180
+set p_pitch = 45
 set i_pitch = 60
 set d_pitch = 25
 set p_roll = 45
@@ -81,8 +86,8 @@ rateprofile 0
 # rateprofile
 rateprofile 0
 
-set roll_srate = 84
-set pitch_srate = 84
-set yaw_srate = 83
+set roll_srate = 86
+set pitch_srate = 86
+set yaw_srate = 84
 
 # 
