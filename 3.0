@@ -2,13 +2,7 @@
 # BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
 
 # name
-garuda blue
-
-#motors
-#emax rs2205 2300kv
-
-#esc
-#racestar/cicada 30a
+name blue tops
 
 # mixer
 mixer CUSTOM
@@ -43,10 +37,10 @@ map TAER1234
 serial 1 68 115200 57600 0 115200
 
 # led
-led 0 7,12::AT:0
-led 1 8,12::AT:0
-led 2 9,12::AT:0
-led 3 10,12::AT:0
+led 0 7,13::ATI:0
+led 1 6,13::ATI:0
+led 2 11,13::ATI:0
+led 3 10,13::ATI:0
 
 # color
 
@@ -59,8 +53,6 @@ aux 1 26 0 1800 2100
 aux 2 29 0 900 1100
 
 # adjrange
-adjrange 0 0 2 900 1100 4 2
-adjrange 1 1 2 1400 1600 4 2
 
 # rxrange
 
@@ -69,31 +61,32 @@ adjrange 1 1 2 1400 1600 4 2
 # master
 set roll_yaw_cam_mix_degrees = 30
 set min_throttle = 1023
+set max_throttle = 1950
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
-set deadband = 2
-set yaw_deadband = 1
+set deadband = 1
 set acc_hardware = NONE
 set pid_process_denom = 1
 
 # profile
 profile 2
 
-set dterm_setpoint_weight = 160
-set p_pitch = 48
-set i_pitch = 60
-set d_pitch = 25
+set dterm_setpoint_weight = 190
+set p_pitch = 45
+set i_pitch = 55
+set d_pitch = 20
 set p_roll = 45
-set i_roll = 60
-set d_roll = 25
-set p_yaw = 60
+set i_roll = 55
+set p_yaw = 50
 rateprofile 1
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 84
-set pitch_srate = 84
-set yaw_srate = 83  
+set roll_srate = 90
+set pitch_srate = 86
+set yaw_srate = 84
+set tpa_rate = 0
+set tpa_breakpoint = 1750
 
-# 
+#
