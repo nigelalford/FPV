@@ -71,21 +71,23 @@ set pid_process_denom = 1
 # profile
 profile 2
 
-set dterm_setpoint_weight = 190
+set setpoint_relax_ratio = 40
+set dterm_setpoint_weight = 185
 set p_pitch = 45
 set i_pitch = 55
-set d_pitch = 20
+set d_pitch = 25
 set p_roll = 45
 set i_roll = 55
-set p_yaw = 50
+set d_roll = 25
+set p_yaw = 60
 rateprofile 1
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 90
-set pitch_srate = 86
-set yaw_srate = 84
+set roll_srate = 85
+set pitch_srate = 84
+set yaw_srate = 83
 set tpa_rate = 0
 set tpa_breakpoint = 1750
 
