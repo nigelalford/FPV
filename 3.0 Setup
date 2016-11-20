@@ -1,3 +1,6 @@
+# version
+# BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
+
 # name
 name red ruda
 
@@ -31,7 +34,6 @@ feature AIRMODE
 map TAER1234
 
 # serial
-serial 0 0 115200 57600 0 115200
 serial 1 68 115200 57600 0 115200
 
 # led
@@ -59,6 +61,7 @@ aux 2 29 0 900 1100
 # master
 set roll_yaw_cam_mix_degrees = 30
 set min_throttle = 1023
+set max_throttle = 1950
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
 set deadband = 3
@@ -71,13 +74,13 @@ set pid_process_denom = 1
 profile 1
 
 set setpoint_relax_ratio = 40
-set dterm_setpoint_weight = 190
-set p_pitch = 45
+set dterm_setpoint_weight = 186
+set p_pitch = 46
 set i_pitch = 60
-set d_pitch = 25
-set p_roll = 45
+set d_pitch = 30
+set p_roll = 46
 set i_roll = 60
-set d_roll = 25
+set d_roll = 30
 set p_yaw = 60
 rateprofile 0
 
@@ -86,6 +89,7 @@ rateprofile 0
 
 set roll_srate = 90
 set pitch_srate = 86
-set yaw_srate = 84
+set yaw_srate = 86
 set tpa_breakpoint = 1750
 
+# 
