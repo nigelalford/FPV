@@ -1,8 +1,11 @@
+
 # version
-# BetaFlight/DOGE 3.0.1 Oct 18 2016 / 10:09:20 (48b7b4f)
+# Betaflight/DOGE 3.1.0 Nov 21 2016 / 03:34:11 (bf7bc87)
 
 # name
 name red ruda
+
+# resources
 
 # mixer
 mixer CUSTOM
@@ -62,13 +65,15 @@ aux 2 29 0 900 1100
 set roll_yaw_cam_mix_degrees = 30
 set min_throttle = 1023
 set max_throttle = 1950
-set motor_pwm_protocol = MULTISHOT
+set digital_idle_offset = 46
+set 3d_deadband_throttle = 1000
+set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set deadband = 3
 set yaw_deadband = 1
 set failsafe_kill_switch = ON
 set acc_hardware = NONE
-set pid_process_denom = 1
+set pid_process_denom = 2
 
 # profile
 profile 1
