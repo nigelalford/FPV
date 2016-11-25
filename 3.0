@@ -27,6 +27,7 @@ feature RX_SERIAL
 feature SOFTSERIAL
 feature TELEMETRY
 feature CURRENT_METER
+feature RSSI_ADC
 feature LED_STRIP
 feature AIRMODE
 
@@ -47,6 +48,7 @@ led 3 10,13::ATI:0
 # color
 
 # mode_color
+mode_color 6 0 5
 mode_color 6 1 2
 
 # aux
@@ -66,7 +68,7 @@ set min_throttle = 1023
 set max_throttle = 1950
 set digital_idle_offset = 46
 set 3d_deadband_throttle = 1000
-set motor_pwm_protocol = DSHOT300
+set motor_pwm_protocol = DSHOT150
 set serialrx_provider = SBUS
 set deadband = 1
 set acc_hardware = NONE
@@ -75,7 +77,7 @@ set pid_process_denom = 2
 # profile
 profile 2
 
-set setpoint_relax_ratio = 40
+set setpoint_relax_ratio = 45
 set dterm_setpoint_weight = 190
 set p_pitch = 48
 set i_pitch = 65
@@ -89,9 +91,9 @@ rateprofile 1
 # rateprofile
 rateprofile 1
 
-set roll_srate = 90
+set roll_srate = 92
 set pitch_srate = 86
 set yaw_srate = 86
-set tpa_breakpoint = 1800
+set tpa_breakpoint = 1550
 
 # 
