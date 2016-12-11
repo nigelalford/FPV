@@ -37,7 +37,8 @@ feature AIRMODE
 map TAER1234
 
 # serial
-serial 1 68 115200 57600 0 115200
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
 
 # led
 led 0 7,13::ATI:0
@@ -53,8 +54,7 @@ mode_color 6 1 2
 
 # aux
 aux 0 0 0 900 1100
-aux 1 26 0 1800 2100
-aux 2 29 0 900 1100
+aux 1 29 0 900 1100
 
 # adjrange
 
@@ -68,32 +68,34 @@ set min_throttle = 1023
 set max_throttle = 1950
 set digital_idle_offset = 46
 set 3d_deadband_throttle = 1000
-set motor_pwm_protocol = DSHOT150
+set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
 set deadband = 1
 set acc_hardware = NONE
-set pid_process_denom = 2
+set pid_process_denom = 1
 
 # profile
 profile 2
 
-set setpoint_relax_ratio = 45
-set dterm_setpoint_weight = 190
-set p_pitch = 48
-set i_pitch = 65
-set d_pitch = 30
-set p_roll = 48
-set i_roll = 65
-set d_roll = 30
+set vbat_pid_compensation = ON
+set setpoint_relax_ratio = 55
+set dterm_setpoint_weight = 195
+set p_pitch = 45
+set i_pitch = 60
+set d_pitch = 25
+set p_roll = 45
+set i_roll = 60
+set d_roll = 25
 set p_yaw = 60
 rateprofile 1
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 92
+set roll_srate = 90
 set pitch_srate = 86
-set yaw_srate = 86
-set tpa_breakpoint = 1550
+set yaw_srate = 82
+set tpa_rate = 30
+set tpa_breakpoint = 1600
 
 # 
