@@ -70,6 +70,8 @@ set digital_idle_offset = 46
 set 3d_deadband_throttle = 1000
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
+set vbat_max_cell_voltage = 44
+set vbat_min_cell_voltage = 34
 set deadband = 1
 set acc_hardware = NONE
 set pid_process_denom = 1
@@ -81,10 +83,9 @@ set vbat_pid_compensation = ON
 set setpoint_relax_ratio = 55
 set dterm_setpoint_weight = 195
 set p_pitch = 45
-set i_pitch = 60
 set d_pitch = 25
 set p_roll = 45
-set i_roll = 60
+set i_roll = 50
 set d_roll = 25
 set p_yaw = 60
 rateprofile 1
@@ -95,7 +96,7 @@ rateprofile 1
 set roll_srate = 90
 set pitch_srate = 86
 set yaw_srate = 82
-set tpa_rate = 30
+set tpa_rate = 40
 set tpa_breakpoint = 1600
 
 # 
