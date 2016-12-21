@@ -28,7 +28,6 @@ feature SOFTSERIAL
 feature TELEMETRY
 feature CURRENT_METER
 feature RSSI_ADC
-feature LED_STRIP
 feature AIRMODE
 
 # beeper
@@ -64,17 +63,19 @@ aux 1 29 0 900 1100
 
 # master
 set roll_yaw_cam_mix_degrees = 30
-set min_throttle = 1023
+set min_throttle = 1015
 set max_throttle = 1950
 set digital_idle_offset = 46
 set 3d_deadband_throttle = 1000
-set motor_pwm_protocol = MULTISHOT
+set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set vbat_max_cell_voltage = 44
 set vbat_min_cell_voltage = 34
 set deadband = 1
+set yaw_deadband = 1
+set failsafe_kill_switch = ON
 set acc_hardware = NONE
-set pid_process_denom = 1
+set pid_process_denom = 2
 
 # profile
 profile 2
@@ -93,8 +94,8 @@ rateprofile 1
 # rateprofile
 rateprofile 1
 
-set roll_srate = 90
-set pitch_srate = 86
+set roll_srate = 92
+set pitch_srate = 90
 set yaw_srate = 82
 set tpa_rate = 40
 set tpa_breakpoint = 1600
