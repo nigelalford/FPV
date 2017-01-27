@@ -1,3 +1,5 @@
+# diff
+
 # version
 # Betaflight/LUX_RACE 3.1.0 Dec 18 2016 / 00:09:13 (a562b8f)
 
@@ -11,10 +13,10 @@ mixer CUSTOM
 
 mmix reset
 
-mmix 3 1.000 -1.000 1.000 -1.000
-mmix 2 1.000 -1.000 -1.000  1.000
-mmix 1 1.000 1.000 1.000 1.000
-mmix 0 1.000 1.000 -1.000 -1.000
+mmix 0  1.000  1.000 -1.000 -1.000
+mmix 1  1.000  1.000  1.000  1.000
+mmix 2  1.000 -1.000 -1.000  1.000
+mmix 3  1.000 -1.000  1.000 -1.000
 
 # servo
 
@@ -34,19 +36,18 @@ feature AIRMODE
 map TAER1234
 
 # serial
-serial 0 68 115200 57600 0 115200
-serial 1 32 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
 
 # led
-led 0 3,1::AT:0
-led 1 4,1::CT:11
-led 2 5,1::CT:11
-led 3 6,1::CT:11
-led 4 7,1::AT:0
+led 0 6,5::AT:0
+led 1 6,6::AT:0
+led 2 6,7::AT:0
 
 # color
 
 # mode_color
+mode_color 6 0 1
+mode_color 6 1 8
 
 # aux
 aux 0 0 0 900 1300
@@ -60,18 +61,29 @@ aux 0 0 0 900 1300
 # master
 set roll_yaw_cam_mix_degrees = 30
 set min_throttle = 1015
+set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
+set vbat_min_cell_voltage = 34
 set align_board_yaw = 180
+set gyro_lowpass = 120
 set acc_hardware = NONE
 set pid_process_denom = 2
 
 # profile
 profile 0
 
+set dterm_lowpass = 120
 rateprofile 0
 
 # rateprofile
 rateprofile 0
 
+set rc_rate = 160
+set rc_rate_yaw = 150
+set thr_mid = 40
+set thr_expo = 70
+set roll_srate = 73
+set pitch_srate = 72
+set yaw_srate = 72
 
 # 
