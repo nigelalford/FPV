@@ -1,0 +1,47 @@
+# Betaflight / PIKOBLX 3.1.6 Feb 21 2017 / 14:35:09 (1fd502c)
+name shrike
+resource MOTOR 1 A07
+resource PPM 1 NONE
+
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature CURRENT_METER
+feature AIRMODE
+map TAER1234
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+aux 0 0 0 900 1150
+set fpv_mix_degrees = 35
+set min_throttle = 1030
+set digital_idle_percent =  4.000
+set motor_pwm_protocol = DSHOT600
+set serialrx_provider = SBUS
+set frsky_vfas_cell_voltage = ON
+set vbat_scale = 112
+set gyro_lowpass = 100
+set deadband = 3
+set acc_hardware = NONE
+set pid_process_denom = 1
+profile 0
+
+set vbat_pid_gain = ON
+set d_setpoint_weight = 190
+set p_pitch = 48
+set i_pitch = 58
+set p_roll = 45
+set i_roll = 58
+set d_roll = 21
+set p_yaw = 75
+set i_yaw = 65
+rateprofile 0
+rateprofile 0
+
+set rc_rate = 90
+set rc_rate_yaw = 90
+set roll_srate = 83
+set pitch_srate = 84
+set yaw_srate = 82
+
+# 
