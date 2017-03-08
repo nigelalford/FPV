@@ -1,0 +1,102 @@
+# version
+# Betaflight/DOGE 3.1.0 Nov 21 2016 / 03:34:11 (bf7bc87)
+
+# name
+name red ruda
+
+# resources
+
+# mixer
+mixer CUSTOM
+
+mmix reset
+
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000 -1.000 -1.000
+mmix 3  1.000  1.000  1.000  1.000
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature CURRENT_METER
+feature RSSI_ADC
+feature AIRMODE
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+# led
+led 0 7,12::AT:0
+led 1 8,12::AT:0
+led 2 9,12::AT:0
+led 3 10,12::AT:0
+
+# color
+
+# mode_color
+mode_color 6 1 2
+
+# aux
+aux 0 0 0 900 1100
+aux 1 29 0 900 1100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set roll_yaw_cam_mix_degrees = 30
+set min_throttle = 1012
+set digital_idle_offset = 46
+set 3d_deadband_throttle = 1000
+set motor_pwm_protocol = DSHOT600
+set serialrx_provider = SBUS
+set vbat_max_cell_voltage = 44
+set vbat_min_cell_voltage = 34
+set deadband = 1
+set yaw_deadband = 1
+set failsafe_kill_switch = ON
+set acc_hardware = NONE
+set pid_process_denom = 2
+
+# profile
+profile 1
+
+set vbat_pid_compensation = ON
+set setpoint_relax_ratio = 55
+set dterm_setpoint_weight = 195
+set p_pitch = 50
+set i_pitch = 55
+set d_pitch = 25
+set p_roll = 45
+set i_roll = 55
+set d_roll = 25
+set p_yaw = 65
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_srate = 92
+set pitch_srate = 90
+set yaw_srate = 82
+set tpa_rate = 40
+set tpa_breakpoint = 1600
+
+# 

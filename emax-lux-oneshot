@@ -1,0 +1,79 @@
+# version
+# Betaflight / LUX_RACE 3.1.0 Jan 25 2017 / 09:40:00 (88693ca)
+
+# name
+name alienwares
+
+# resources
+
+# mixer
+mixer CUSTOM
+
+mmix reset
+
+
+# servo
+
+# servo mix
+
+
+# feature
+feature LED_STRIP
+feature AIRMODE
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 0 64 115200 57600 0 115200
+
+# led
+led 0 6,5::AT:0
+led 1 6,6::AT:0
+led 2 6,7::AT:0
+
+# color
+
+# mode_color
+mode_color 6 0 1
+mode_color 6 1 8
+
+# aux
+aux 0 0 0 900 1300
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set roll_yaw_cam_mix_degrees = 30
+set min_throttle = 1015
+set motor_pwm_protocol = DSHOT600
+set vbat_min_cell_voltage = 34
+set align_board_yaw = 180
+set gyro_lowpass = 120
+set acc_hardware = NONE
+set pid_process_denom = 2
+
+# profile
+profile 1
+
+set dterm_lowpass = 120
+rateprofile 1
+
+# rateprofile
+rateprofile 1
+
+set rc_rate = 160
+set rc_rate_yaw = 150
+set thr_mid = 40
+set thr_expo = 70
+set roll_srate = 73
+set pitch_srate = 72
+set yaw_srate = 72
+
+# 

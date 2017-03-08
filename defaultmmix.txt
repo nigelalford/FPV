@@ -1,0 +1,4 @@
+mmix 0 1.000 -1.000 1.000 -1.000 (Rear Right motor)
+mmix 1 1.000 -1.000 -1.000  1.000 (Front Right motor)
+mmix 2 1.000 1.000 1.000 1.000 (Rear Left motor)
+mmix 3 1.000 1.000 -1.000 -1.000 (Front Left motor)

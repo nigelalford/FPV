@@ -1,0 +1,97 @@
+# Betaflight / DOGE 3.1.0 Jan 25 2017 / 09:28:26 (88693ca)
+
+# name
+name blue tops
+
+# resources
+
+# mixer
+mixer CUSTOM
+
+mmix reset
+
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PPM
+feature RX_SERIAL
+feature SOFTSERIAL
+feature TELEMETRY
+feature CURRENT_METER
+feature RSSI_ADC
+feature LED_STRIP
+feature AIRMODE
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# led
+led 0 7,13::ATI:2
+led 1 6,13::ATI:2
+led 2 11,13::ATI:2
+led 3 10,13::ATI:2
+
+# color
+
+# mode_color
+mode_color 6 0 8
+mode_color 6 1 12
+
+# aux
+aux 0 0 0 900 1100
+aux 1 29 0 900 1100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set roll_yaw_cam_mix_degrees = 30
+set min_throttle = 1020
+set max_throttle = 1950
+set digital_idle_percent =  4.000
+set 3d_deadband_throttle = 1000
+set motor_pwm_protocol = DSHOT600
+set serialrx_provider = SBUS
+set vbat_max_cell_voltage = 44
+set vbat_min_cell_voltage = 34
+set vbat_warning_cell_voltage = 36
+set gyro_lowpass = 130
+set deadband = 1
+set yaw_deadband = 1
+set failsafe_kill_switch = ON
+set acc_hardware = NONE
+set pid_process_denom = 2
+
+# profile
+profile 1
+
+set dterm_lowpass = 130
+set p_pitch = 60
+set d_pitch = 25
+set p_yaw = 85
+set i_yaw = 55
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set rc_rate = 115
+set rc_rate_yaw = 150
+set roll_srate = 86
+set pitch_srate = 80
+set yaw_srate = 80
+
+# 
