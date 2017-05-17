@@ -1,79 +1,52 @@
-# version
-# Betaflight / LUX_RACE 3.1.0 Jan 25 2017 / 09:40:00 (88693ca)
-
-# name
+# Betaflight / LUX_RACE 3.1.7 Apr  3 2017 / 22:10:13 (e1c4b5c)
 name alienwares
-
-# resources
-
-# mixer
 mixer CUSTOM
 
 mmix reset
 
+mmix 0  1.000  1.000 -1.000 -1.000
+mmix 1  1.000  1.000  1.000  1.000
+mmix 2  1.000 -1.000 -1.000  1.000
+mmix 3  1.000 -1.000  1.000 -1.000
 
-# servo
-
-# servo mix
-
-
-# feature
-feature LED_STRIP
+feature CURRENT_METER
 feature AIRMODE
-
-# beeper
-
-# map
 map TAER1234
-
-# serial
-serial 0 64 115200 57600 0 115200
-
-# led
+serial 0 32 115200 57600 0 115200
 led 0 6,5::AT:0
 led 1 6,6::AT:0
 led 2 6,7::AT:0
-
-# color
-
-# mode_color
 mode_color 6 0 1
 mode_color 6 1 8
-
-# aux
-aux 0 0 0 900 1300
-
-# adjrange
-
-# rxrange
-
-# rxfail
-
-# master
-set roll_yaw_cam_mix_degrees = 30
-set min_throttle = 1015
-set motor_pwm_protocol = DSHOT600
+aux 0 0 0 900 1150
+set min_throttle = 1021
+set motor_pwm_protocol = DSHOT300
 set vbat_min_cell_voltage = 34
 set align_board_yaw = 180
-set gyro_lowpass = 120
+set gyro_lowpass = 80
+set deadband = 4
+set yaw_deadband = 2
 set acc_hardware = NONE
+set acc_trim_roll = -208
 set pid_process_denom = 2
-
-# profile
 profile 1
 
-set dterm_lowpass = 120
-rateprofile 1
+set d_lowpass_type = PT1
+set anti_gravity_gain =  1.000
+set setpoint_relax_ratio = 95
+set p_pitch = 20
+set i_pitch = 0
+set d_pitch = 0
+set p_roll = 20
+set i_roll = 0
+set d_roll = 0
+rateprofile 2
+rateprofile 2
 
-# rateprofile
-rateprofile 1
-
-set rc_rate = 160
-set rc_rate_yaw = 150
-set thr_mid = 40
-set thr_expo = 70
-set roll_srate = 73
-set pitch_srate = 72
-set yaw_srate = 72
+set rc_rate = 90
+set rc_rate_yaw = 90
+set roll_srate = 83
+set pitch_srate = 83
+set yaw_srate = 82
 
 # 
