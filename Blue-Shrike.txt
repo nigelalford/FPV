@@ -1,3 +1,4 @@
+# diff
 # Betaflight / PIKOBLX 3.1.7 Apr  3 2017 / 22:16:26 (e1c4b5c)
 name brike
 
@@ -23,10 +24,10 @@ led 1 7,7::AT:0
 led 2 7,8:S:AT:0
 aux 0 0 0 900 1225
 aux 1 4 0 900 1225
-
 set min_throttle = 1022
 set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
+set gyro_lowpass = 100
 set gyro_notch1_hz = 0
 set deadband = 2
 set yaw_deadband = 2
@@ -37,9 +38,8 @@ profile 0
 set d_lowpass_type = PT1
 set vbat_pid_gain = ON
 set setpoint_relax_ratio = 85
-
-set p_pitch = 48
-set i_pitch = 49
+set p_pitch = 46
+set i_pitch = 48
 set d_pitch = 25
 set p_roll = 45
 set i_roll = 45
