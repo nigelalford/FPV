@@ -10,37 +10,44 @@ mmix 1  1.000  1.000  1.000  1.000
 mmix 2  1.000 -1.000 -1.000  1.000
 mmix 3  1.000 -1.000  1.000 -1.000
 
-feature -RX_SERIAL
 feature CURRENT_METER
+feature LED_STRIP
 feature AIRMODE
 map TAER1234
-serial 1 1 115200 57600 0 115200
-led 0 6,5::AT:0
-led 1 6,6::AT:0
-led 2 6,7::AT:0
+serial 0 32 115200 57600 0 115200
+serial 2 1 115200 57600 0 115200
+led 0 8,8::AT:0
+led 1 8,9::AT:0
+led 2 8,0::A:0
+led 3 8,1::A:0
 mode_color 6 0 1
 mode_color 6 1 8
 aux 0 0 0 900 1150
 set min_throttle = 1021
-set motor_pwm_protocol = DSHOT300
+set motor_pwm_protocol = MULTISHOT
 set vbat_min_cell_voltage = 34
 set align_board_yaw = 180
-set gyro_lowpass = 80
+set gyro_lowpass = 100
+set gyro_notch1_hz = 0
 set deadband = 4
 set yaw_deadband = 2
 set acc_hardware = NONE
+set acc_trim_pitch = 2
 set acc_trim_roll = -208
 set pid_process_denom = 2
 profile 1
 
 set d_lowpass_type = PT1
+set vbat_pid_gain = ON
 set anti_gravity_gain =  1.000
-set setpoint_relax_ratio = 95
-set i_pitch = 58
+set setpoint_relax_ratio = 85
+set d_setpoint_weight = 100
+set p_pitch = 50
+set i_pitch = 54
 set d_pitch = 25
-set p_roll = 54
-set i_roll = 54
-set d_roll = 22
+set p_roll = 46
+set i_roll = 52
+set d_roll = 23
 rateprofile 2
 rateprofile 2
 
@@ -50,8 +57,4 @@ set roll_srate = 83
 set pitch_srate = 83
 set yaw_srate = 82
 
-# 
-
-serialpassthrough 1 115200
-
-# 
+#
