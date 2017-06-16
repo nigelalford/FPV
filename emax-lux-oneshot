@@ -1,3 +1,4 @@
+# diff
 # Betaflight / LUX_RACE 3.1.7 Apr  3 2017 / 22:10:13 (e1c4b5c)
 name alienwares
 mixer CUSTOM
@@ -9,10 +10,11 @@ mmix 1  1.000  1.000  1.000  1.000
 mmix 2  1.000 -1.000 -1.000  1.000
 mmix 3  1.000 -1.000  1.000 -1.000
 
+feature -RX_SERIAL
 feature CURRENT_METER
 feature AIRMODE
 map TAER1234
-serial 0 32 115200 57600 0 115200
+serial 1 1 115200 57600 0 115200
 led 0 6,5::AT:0
 led 1 6,6::AT:0
 led 2 6,7::AT:0
@@ -34,12 +36,11 @@ profile 1
 set d_lowpass_type = PT1
 set anti_gravity_gain =  1.000
 set setpoint_relax_ratio = 95
-set p_pitch = 20
-set i_pitch = 0
-set d_pitch = 0
-set p_roll = 20
-set i_roll = 0
-set d_roll = 0
+set i_pitch = 58
+set d_pitch = 25
+set p_roll = 54
+set i_roll = 54
+set d_roll = 22
 rateprofile 2
 rateprofile 2
 
@@ -48,5 +49,9 @@ set rc_rate_yaw = 90
 set roll_srate = 83
 set pitch_srate = 83
 set yaw_srate = 82
+
+# 
+
+serialpassthrough 1 115200
 
 # 
