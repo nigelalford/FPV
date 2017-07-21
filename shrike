@@ -5,10 +5,16 @@ name shrike
 feature -RX_PARALLEL_PWM
 feature RX_SERIAL
 feature TELEMETRY
+feature CURRENT_METER
+feature LED_STRIP
 feature AIRMODE
 map TAER1234
+serial 0 1 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
+led 0 7,7::A:0
+led 1 7,8::A:0
+led 2 7,9::A:0
 aux 0 0 0 900 1150
 aux 1 4 0 900 1150
 set min_throttle = 1030
@@ -16,7 +22,6 @@ set motor_pwm_protocol = MULTISHOT
 set serialrx_provider = SBUS
 set frsky_vfas_cell_voltage = ON
 set vbat_scale = 255
-set gyro_lowpass = 100
 set gyro_notch1_hz = 0
 set deadband = 2
 set acc_hardware = NONE
@@ -27,12 +32,12 @@ set d_lowpass_type = PT1
 set vbat_pid_gain = ON
 set anti_gravity_gain =  3.500
 set setpoint_relax_ratio = 70
-set d_setpoint_weight = 90
-set p_pitch = 49
-set i_pitch = 57
+set d_setpoint_weight = 80
+set p_pitch = 48
+set i_pitch = 58
 set d_pitch = 24
-set p_roll = 43
-set i_roll = 50
+set p_roll = 45
+set i_roll = 53
 set d_roll = 23
 set i_yaw = 50
 rateprofile 0
@@ -41,8 +46,8 @@ rateprofile 0
 set rc_rate = 90
 set rc_rate_yaw = 90
 set roll_srate = 82
-set pitch_srate = 84
-set yaw_srate = 82
+set pitch_srate = 82
+set yaw_srate = 80
 set tpa_rate = 20
 
 # 

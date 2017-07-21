@@ -1,0 +1,56 @@
+# diff
+# Betaflight / PIKOBLX 3.1.7 Apr  3 2017 / 22:16:26 (e1c4b5c)
+name cham
+
+mmix reset
+
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000 -1.000 -1.000
+mmix 3  1.000  1.000  1.000  1.000
+
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+feature CURRENT_METER
+feature RSSI_ADC
+feature AIRMODE
+map TAER1234
+serial 0 1 115200 57600 0 115200
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+led 0 7,6:N:AT:0
+led 1 7,7::AT:0
+led 2 7,8:S:AT:0
+aux 0 0 0 900 1225
+aux 1 4 0 900 1225
+set min_throttle = 1022
+set motor_pwm_protocol = MULTISHOT
+set serialrx_provider = SBUS
+set gyro_notch1_hz = 0
+set deadband = 2
+set yaw_deadband = 2
+set acc_hardware = NONE
+set pid_process_denom = 1
+profile 0
+
+set d_lowpass_type = PT1
+set vbat_pid_gain = ON
+set anti_gravity_gain =  2.500
+set setpoint_relax_ratio = 75
+set d_setpoint_weight = 100
+set p_pitch = 49
+set i_pitch = 57
+set d_pitch = 24
+set p_roll = 45
+set i_roll = 50
+set d_roll = 23
+rateprofile 0
+rateprofile 0
+
+set rc_rate = 90
+set rc_rate_yaw = 90
+set roll_srate = 82
+set pitch_srate = 84
+set yaw_srate = 82
+set tpa_rate = 30
