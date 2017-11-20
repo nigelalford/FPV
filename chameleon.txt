@@ -1,56 +1,132 @@
-# diff
-# Betaflight / PIKOBLX 3.1.7 Apr  3 2017 / 22:16:26 (e1c4b5c)
+
+# version
+# Betaflight / MATEKF405 (MKF4) 3.2.2 Nov 11 2017 / 00:35:15 (77782e602) MSP API: 1.36
+
+# name
 name cham
 
-mmix reset
+# resources
 
-mmix 0  1.000 -1.000  1.000 -1.000
-mmix 1  1.000 -1.000 -1.000  1.000
-mmix 2  1.000  1.000 -1.000 -1.000
-mmix 3  1.000  1.000  1.000  1.000
+# mixer
 
-feature -RX_PARALLEL_PWM
-feature RX_SERIAL
-feature TELEMETRY
-feature CURRENT_METER
+# servo
+
+# servo mix
+
+
+# feature
+feature -SOFTSERIAL
 feature RSSI_ADC
 feature AIRMODE
+feature DYNAMIC_FILTER
+
+# beeper
+
+# map
 map TAER1234
-serial 0 1 115200 57600 0 115200
-serial 1 32 115200 57600 0 115200
-serial 2 64 115200 57600 0 115200
-led 0 7,6:N:AT:0
-led 1 7,7::AT:0
-led 2 7,8:S:AT:0
+
+# serial
+serial 4 8192 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
 aux 0 0 0 900 1225
-aux 1 4 0 900 1225
-set min_throttle = 1022
-set motor_pwm_protocol = MULTISHOT
-set serialrx_provider = SBUS
+aux 1 4 1 900 1225
+aux 2 28 1 900 1125
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
 set gyro_notch1_hz = 0
-set deadband = 2
-set yaw_deadband = 2
+set gyro_notch1_cutoff = 0
 set acc_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1010
+set max_check = 1980
+set max_aux_channels = 12
+set blackbox_p_ratio = 0
+set blackbox_device = NONE
+set min_throttle = 1024
+set max_throttle = 1980
+set dshot_idle_value = 100
+set use_unsynced_pwm = ON
+set motor_pwm_protocol = DSHOT600
+set align_board_pitch = 2
+set align_board_yaw = 270
+set bat_capacity = 1300
+set ibata_scale = 165
+set deadband = 3
+set yaw_deadband = 2
 set pid_process_denom = 1
+set osd_rssi_alarm = 10
+set osd_cap_alarm = 1000
+set osd_alt_alarm = 1000
+set osd_vbat_pos = 2131
+set osd_rssi_pos = 2487
+set osd_tim_1_pos = 2114
+set osd_tim_2_pos = 0
+set osd_flymode_pos = 0
+set osd_throttle_pos = 0
+set osd_vtx_channel_pos = 0
+set osd_crosshairs = 0
+set osd_current_pos = 0
+set osd_mah_drawn_pos = 0
+set osd_craft_name_pos = 0
+set osd_gps_speed_pos = 0
+set osd_gps_lon_pos = 0
+set osd_gps_lat_pos = 0
+set osd_gps_sats_pos = 0
+set osd_home_dir_pos = 0
+set osd_home_dist_pos = 0
+set osd_compass_bar_pos = 0
+set osd_altitude_pos = 0
+set osd_pid_roll_pos = 0
+set osd_pid_pitch_pos = 0
+set osd_pid_yaw_pos = 0
+set osd_debug_pos = 0
+set osd_power_pos = 0
+set osd_pidrate_profile_pos = 0
+set osd_warnings_pos = 2466
+set osd_avg_cell_voltage_pos = 2481
+set osd_pit_ang_pos = 0
+set osd_rol_ang_pos = 0
+set osd_battery_usage_pos = 1000
+set osd_disarmed_pos = 0
+set osd_nheading_pos = 0
+set osd_nvario_pos = 0
+set osd_esc_tmp_pos = 0
+set osd_esc_rpm_pos = 0
+set osd_stat_max_spd = OFF
+set osd_stat_min_batt = OFF
+set osd_stat_endbatt = ON
+set osd_stat_tim_1 = ON
+set osd_stat_tim_2 = OFF
+
+# profile
 profile 0
 
-set d_lowpass_type = PT1
+set dterm_lowpass_type = PT1
 set vbat_pid_gain = ON
-set anti_gravity_gain =  2.500
-set setpoint_relax_ratio = 75
-set d_setpoint_weight = 100
-set p_pitch = 49
-set i_pitch = 57
-set d_pitch = 24
-set p_roll = 45
-set i_roll = 50
-set d_roll = 23
-rateprofile 0
+set setpoint_relax_ratio = 91
+set dterm_setpoint_weight = 60
+
+# rateprofile
 rateprofile 0
 
 set rc_rate = 90
 set rc_rate_yaw = 90
-set roll_srate = 82
+set roll_srate = 83
 set pitch_srate = 84
-set yaw_srate = 82
-set tpa_rate = 30
+set yaw_srate = 80
+set tpa_rate = 20
