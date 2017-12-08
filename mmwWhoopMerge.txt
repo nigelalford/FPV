@@ -1,0 +1,318 @@
+diff
+# Betaflight / FF_ACROWHOOPSP (AWHS) 3.2.0 Sep 26 2017 / 12:24:47 (793ed1a) MSP API: 1.36
+
+feature TELEMETRY
+feature RSSI_ADC
+serial 20 5 115200 57600 0 115200
+serial 0 5 115200 57600 0 115200
+serial 2 68 115200 57600 0 115200
+aux 0 0 0 900 1125
+aux 1 1 0 900 1150
+set gyro_lpf = 98HZ
+set failsafe_delay = 1
+set failsafe_off_delay = 0
+set failsafe_throttle_low_delay = 1
+set deadband = 5
+set yaw_deadband = 10
+set pid_process_denom = 1
+profile 0
+
+set vbat_pid_gain = ON
+set p_pitch = 80
+set i_pitch = 80
+set d_pitch = 30
+set i_roll = 80
+set d_roll = 30
+set d_yaw = 0
+set p_level = 25
+set d_level = 50
+rateprofile 0
+
+set rc_rate = 140
+set rc_rate_yaw = 120
+set rc_expo = 20
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 0
+
+# , 98HZ, 42HZ, 20HZ, 10HZ, 5HZ, EXPERIMENTAL
+
+gyro_sync_denom = 1
+Allowed range: 1 - 32
+
+gyro_lowpass_type = PT1
+Allowed values: PT1, BIQUAD, FIR
+
+gyro_lowpass_hz = 90
+Allowed range: 0 - 255
+
+gyro_notch1_hz = 400
+Allowed range: 0 - 16000
+
+gyro_notch1_cutoff = 300
+Allowed range: 0 - 16000
+
+gyro_notch2_hz = 200
+Allowed range: 0 - 16000
+
+gyro_notch2_cutoff = 100
+Allowed range: 0 - 16000
+
+gyro_cal_on_first_arm = OFF
+Allowed values: OFF, ON
+
+
+# set gyro_lpf - 98hz
+Invalid name
+
+# set gyro_lpf = 98hz
+gyro_lpf set to 98HZ
+# get deadband
+3d_deadband_low = 1406
+Allowed range: 0 - 2000
+
+3d_deadband_high = 1514
+Allowed range: 0 - 2000
+
+3d_deadband_throttle = 50
+Allowed range: 0 - 2000
+
+accxy_deadband = 40
+Allowed range: 0 - 100
+
+accz_deadband = 40
+Allowed range: 0 - 100
+
+alt_hold_deadband = 40
+Allowed range: 1 - 250
+
+deadband = 0
+Allowed range: 0 - 32
+
+yaw_deadband = 0
+Allowed range: 0 - 100
+
+
+# set deadband = 5
+deadband set to 5
+# set yaw_deadband = 10
+yaw_deadband set to 10
+# set failsafe_delay = 1
+failsafe_delay set to 1
+# set failsafe_off_delay = 0
+failsafe_off_delay set to 0
+# set failsafe_throttle = 1000
+failsafe_throttle set to 1000
+# set failsafe_kill_switch = OFF
+failsafe_kill_switch set to OFF
+# set failsafe_throttle_low_delay = 1
+failsafe_throttle_low_delay set to 1
+# set failsafe_procedure = DROP
+failsafe_procedure set to DROP
+# get pid_controller
+Invalid name
+
+# get pid
+pid_process_denom = 4
+Allowed range: 1 - 16
+
+vbat_pid_gain = OFF
+Allowed values: OFF, ON
+
+pid_at_min_throttle = ON
+Allowed values: OFF, ON
+
+pidsum_limit = 500
+Allowed range: 100 - 1000
+
+pidsum_limit_yaw = 400
+Allowed range: 100 - 1000
+
+pid_in_tlm = OFF
+Allowed values: OFF, ON
+
+
+# set vbat pid_gain = on
+Invalid name
+
+# set vbat_pid_gain = on
+vbat_pid_gain set to ON
+# get level
+p_level = 50
+Allowed range: 0 - 200
+
+i_level = 50
+Allowed range: 0 - 200
+
+d_level = 75
+Allowed range: 0 - 200
+
+level_limit = 55
+Allowed range: 10 - 90
+
+
+# get level_sensitivity
+Invalid name
+
+# get sensitivity
+Invalid name
+
+# set p_pitch = 80
+p_pitch set to 80
+# set i_pitch = 80
+i_pitch set to 80
+# set d_pitch = 30
+d_pitch set to 30
+# set p_roll = 80
+p_roll set to 80
+# set i_roll = 80
+i_roll set to 80
+# set d_roll = 30
+d_roll set to 30
+# set p_yaw = 180
+p_yaw set to 180
+# set i_yaw = 45
+i_yaw set to 45
+# set d_yaw = 0
+d_yaw set to 0
+# set p_alt = 50
+p_alt set to 50
+# set i_alt = 0
+i_alt set to 0
+# set d_alt = 0
+d_alt set to 0
+# set p_level = 25
+p_level set to 25
+# set i_level = 50
+i_level set to 50
+# set d_level = 50
+d_level set to 50
+# set p_vel = 55
+p_vel set to 55
+# set i_vel = 55
+i_vel set to 55
+# set d_vel = 75
+d_vel set to 75
+# set rc_rate = 140
+rc_rate set to 140
+# set rc_rate_yaw = 120
+rc_rate_yaw set to 120
+# set rc_expo = 20
+rc_expo set to 20
+# set rc_yaw_expo = 0
+Invalid name
+
+# set thr_mid = 50
+thr_mid set to 50
+# set thr_expo = 0
+thr_expo set to 0
+# set roll_srate = 0
+roll_srate set to 0
+# set pitch_srate = 0
+pitch_srate set to 0
+# set yaw_srate = 0
+yaw_srate set to 0
+# set tpa_rate = 0
+tpa_rate set to 0
+# set tpa_breakpoint = 1650
+tpa_breakpoint set to 1650
+# serial 20 5 115200 57600 0 115200
+
+# serial 0 5 115200 57600 0 115200
+
+# serial 2 68 115200 57600 0 115200
+
+# # aux
+
+# aux 0 0 0 900 1125
+
+# aux 1 1 0 900 1150
+
+# get feature
+Invalid name
+
+# diff
+# Betaflight / FF_ACROWHOOPSP (AWHS) 3.2.0 Sep 26 2017 / 12:24:47 (793ed1a) MSP API: 1.36
+
+serial 20 5 115200 57600 0 115200
+serial 0 5 115200 57600 0 115200
+serial 2 68 115200 57600 0 115200
+aux 0 0 0 900 1125
+aux 1 1 0 900 1150
+set gyro_lpf = 98HZ
+set failsafe_delay = 1
+set failsafe_off_delay = 0
+set failsafe_throttle_low_delay = 1
+set deadband = 5
+set yaw_deadband = 10
+profile 0
+
+set vbat_pid_gain = ON
+set p_pitch = 80
+set i_pitch = 80
+set d_pitch = 30
+set i_roll = 80
+set d_roll = 30
+set d_yaw = 0
+set p_level = 25
+set d_level = 50
+rateprofile 0
+
+set rc_rate = 140
+set rc_rate_yaw = 120
+set rc_expo = 20
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 0
+
+# feature RX_SERIAL
+Enabled RX_SERIAL
+
+# feature TELEMETRY
+Enabled TELEMETRY
+
+# feature RSSI_ADC
+Enabled RSSI_ADC
+
+# diff
+# Betaflight / FF_ACROWHOOPSP (AWHS) 3.2.0 Sep 26 2017 / 12:24:47 (793ed1a) MSP API: 1.36
+
+feature TELEMETRY
+feature RSSI_ADC
+serial 20 5 115200 57600 0 115200
+serial 0 5 115200 57600 0 115200
+serial 2 68 115200 57600 0 115200
+aux 0 0 0 900 1125
+aux 1 1 0 900 1150
+set gyro_lpf = 98HZ
+set failsafe_delay = 1
+set failsafe_off_delay = 0
+set failsafe_throttle_low_delay = 1
+set deadband = 5
+set yaw_deadband = 10
+profile 0
+
+set vbat_pid_gain = ON
+set p_pitch = 80
+set i_pitch = 80
+set d_pitch = 30
+set i_roll = 80
+set d_roll = 30
+set d_yaw = 0
+set p_level = 25
+set d_level = 50
+rateprofile 0
+
+set rc_rate = 140
+set rc_rate_yaw = 120
+set rc_expo = 20
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set tpa_rate = 0
+
+# clear
+Unknown command, try 'help'
+# 

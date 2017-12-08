@@ -1,0 +1,83 @@
+# version
+# Betaflight/PIKOBLX 3.1.0 Dec  6 2016 / 02:01:00 (bbe3d2d)
+
+# name
+whoopa
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+
+# beeper
+
+# map
+map TAER1234
+
+# serial
+serial 1 4 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 900 1400
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set rssi_channel = 6
+set min_throttle = 1040
+set 3d_deadband_throttle = 0
+set motor_pwm_protocol = BRUSHED
+set serialrx_provider = SBUS
+set sbus_inversion = OFF
+set current_meter_scale = 400
+set gyro_sync_denom = 8
+set deadband = 2
+set yaw_deadband = 2
+set yaw_motor_direction = -1
+set pid_process_denom = 1
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set rc_expo = 20
+set rc_yaw_expo = 10
+set roll_srate = 80
+set pitch_srate = 80
+
+#
+set level_limit = 70 (default) || level_angle_limit => level_limit
+the maximum allowed angle in degrees
+
+set Level_sensitivity = 100 (default) - lowering this may give smoother flight
+level_stick_sensitivity => level_sensitivity
+the max deflection on full stick in degrees
+
+motor_pwm_rate
+like pwm = 750 or so for 7mm, 666 for 6mm
+but between 500 and 1000 will be entirely a tune-by-feel
+but that low the motors/fets Hummmmm like an SOB

@@ -1,0 +1,7 @@
+Indoor Multi GP whoop channels
+
+5685 E 2
+5760 F 2
+5800 F 4
+5860 F 7
+5905 E 6
